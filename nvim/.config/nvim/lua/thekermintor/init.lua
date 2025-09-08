@@ -19,4 +19,8 @@ vim.opt.rtp:prepend(lazypath)
 require("thekermintor.remap")
 require("thekermintor.set")
 
-require("lazy").setup("thekermintor.lazy")
+require("lazy").setup("thekermintor.lazy", {
+    change_detection = {
+        notify = false, -- Mute notifications when reloading
+    },
+})
